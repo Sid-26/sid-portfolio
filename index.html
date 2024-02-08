@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello Gamer Hell!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            // im inside javascript
+            let count = 0;
+
+            function updateCounterText() {
+                const counterTimeText = document.getElementById('time');
+                if (count === 1) {
+                counterTimeText.innerHTML = ' time.';
+                } else {
+                counterTimeText.innerHTML = ' times.';
+                }
+            }
+            
+            function increment() {
+                count++;
+                updateCounterText();
+                document.getElementById('counter').innerHTML = count;
+            }
+            
+            function decrement() { // maybe for future
+                if (count > 0) {
+                count--;
+                updateCounterText();
+                document.getElementById('counter').innerHTML = count;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello World!!</h1>
+        <p>I have finally deployed a basic HTML page (SSL certified) (created in VIM)</p>
+         <!-- hi source code viewer, you can't do any RFIs here. -->
+        <div>
+            <button onclick="increment()">Click me</button>
+            <p>This button was clicked <span id="counter">0 </span><span id="time">times.</span></p>
+        </div>
+    </body>
+</html>
